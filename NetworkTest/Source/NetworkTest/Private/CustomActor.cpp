@@ -28,6 +28,7 @@ void ACustomActor::SetBooleanValue_Implementation(const bool BooleanValue)
 void ACustomActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	UE_LOG(LogTemp, Warning, TEXT("REPLICATE"))
 	DOREPLIFETIME(ACustomActor, bBoolean);
 }
 
